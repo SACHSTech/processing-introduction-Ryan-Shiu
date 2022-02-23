@@ -3,34 +3,62 @@ import processing.core.PApplet;
 public class Sketch extends PApplet {
 	
 	
-  /**
-   * Called once at the beginning of execution, put your size all in this method
-   */
   public void settings() {
-	// put your size call here
+    // Size of sketchboard
     size(400, 400);
   }
 
-  /** 
-   * Called once at the beginning of execution.  Add initial set up
-   * values here i.e background, stroke, fill etc.
-   */
   public void setup() {
-    background(210, 255, 173);
-  }
-
-  /**
-   * Called repeatedly, anything drawn to the screen goes here
-   */
-  public void draw() {
-	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
-
-    stroke(255);
-    line(50, 125, 70, 50);  
+    // Background Colour
+    background(66, 228, 253);
   }
   
-  // define other methods down here.
+  public void draw() {
+    // Drawing the square of the house
+    fill(165, 22, 23);
+    rect(125, 200, 150, 150); 
+
+    // Drawing the chimmney
+    fill(198, 109, 71);
+    rect(230, 90, 25, 50);
+
+    // Drawing chimmney smoke
+    fill(255, 255, 255);
+    ellipse(243, 55, 20, 50);
+    
+    // Drawing the top triangle of the house
+    fill(165, 22, 23);
+    triangle(90, 200, 200, 80, 310, 200);
+
+    // Drawing the Grass
+    fill(0, 255, 0);
+    rect(0, 350, 400, 70);
+
+    // Drawing the top window
+    fill(204, 255, 255);
+    ellipse(200, 130, 40, 40);
+
+    // Drawing the right window
+    fill(204, 255, 255);
+    rect(225, 215, 40, 40);
+    // Drawing lines for the right window
+    line(225, 235, 265, 235);
+    line(245, 215, 245, 255);
+    
+    // Drawing the left window
+    fill(204, 255, 255);
+    rect(135, 215, 40, 40);
+    // Drawing lines for the left window
+    line(135, 235, 175, 235);
+    line(155, 215, 155, 255);
+
+    // Drawing the Door
+    fill(204, 102, 0);
+    rect(185, 300, 35, 50);
+
+    // Drawing the sun
+    fill(255, 255, 0);
+    ellipse(25, 25, 100, 100);
+  }
+  
 }
